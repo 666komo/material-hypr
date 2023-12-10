@@ -1,0 +1,174 @@
+* {
+    /* `otf-font-awesome` is required to be installed for icons */
+    font-family: Terminess Nerd Font;
+    font-weight: bold;
+    font-size: 13px;
+    color: black;
+}
+
+window#waybar {
+    background-color: rgba(182, 182, 182, 1);
+    border-bottom: 2px solid rgba(230, 230, 230, 0.5);
+    color: #ffffff;
+}
+
+button {
+    /* Use box-shadow instead of border so the text isn't offset */
+    box-shadow: inset 0 -3px transparent;
+    /* Avoid rounded borders under each button name */
+    border: none;
+    border-radius: 0;
+}
+
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+button:hover {
+    background: inherit;
+    border-radius: 10px;
+    margin: 3px 0;
+}
+
+#workspaces{
+	background: rgba(230,230,230,0.5);
+	padding: 3px 8px 0 8px;
+	border-radius: 8px 8px 0 0;
+	margin-bottom: 3px;
+	margin-top: 3px
+}
+
+#workspaces button {
+    padding: 0 5px;
+    background: transparent;
+    color: #000;
+}
+
+#workspaces button:hover {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+#workspaces button.active {
+    padding: 0 6px 0 2px;
+    margin: 1px 3px 1px;
+    border-radius: 5px;
+}
+
+#workspaces button.urgent {
+    background: transparent;
+}
+
+#mode {
+    background-color: #64727D;
+    border-bottom: 3px solid #ffffff;
+}
+
+
+
+#clock{
+    font-family: JetBrainsMono Nerd Font;
+    font-weight: Bold;
+    font-size:16px;
+    padding: 1px 6px;
+    margin: 1px 0px;
+    border: 0px solid #000;
+    color: #000;
+}
+
+.modules-center{
+	background: rgba(230,230,230,0.5);
+	padding: 3px 3px 0 3px;
+	border-radius: 8px 8px 0 0;
+	margin-bottom: 3px;
+	margin-top: 3px
+}
+
+#backlight,
+#pulseaudio,
+#battery,
+#network{
+    padding: 1px 5px;
+    margin: 1px 0px;
+    border: 0px solid #000000;
+    color: #000;
+    background: rgba(182,182,182,1);
+    border-radius: 10px;
+}
+
+.modules-right{
+	background: rgba(230,230,230,0.5);
+	padding: 3px 8px 0 8px;
+	border-radius: 8px 8px 0 0;
+	margin-bottom: 3px;
+	margin-top: 3px;
+}
+
+#backlight{
+	padding-right: 10px;
+	padding-left: 7px;
+}
+
+@keyframes blink {
+    to {
+        background-color: #ffffff;
+        color: #000000;
+    }
+}
+
+#battery.charging{
+	padding-right:9px;
+	padding-left:8px;
+}
+
+#battery.warning:not(.charging) {
+    background: rgba(255,120,0,1);
+    color: #000;
+}
+
+#battery.critical:not(.charging) {
+    background: rgba(255,0,0,1);
+    color: #000000;
+}
+
+label:focus {
+    background-color: #000000;
+}
+
+#network {
+	padding-right: 4px;
+}
+
+#pulseaudio {
+	padding-right: 9px;
+	padding-left: 7px;
+}
+
+#temperature.critical {
+    background-color: #eb4d4b;
+}
+
+#custom-playerctl {
+  font-family: "Iosevka Nerd Font";
+  margin-top: 2px;
+  margin-bottom: 5px;
+  padding-right: 15px;
+  padding-left: 15px;
+  padding-top: 1px;
+}
+
+#custom-powermenu {
+  padding: 1px 9px 1px 7px;
+  margin: 1px 4px 1px 0px;
+  background: rgba(182,182,182,1);
+  border-radius: 0 8px 8px 0;
+}
+
+#custom-modeswitch {
+  padding: 1px 10px 1px 6px;
+  margin: 1px 0px 1px 0px;
+  background: rgba(182,182,182,1);
+}
+
+#custom-baraction {
+  padding: 1px 9px 1px 7px;
+  margin: 1px 0 1px 20px;
+  background: rgba(182,182,182,1);
+  border-radius: 8px 0 0 8px;
+}

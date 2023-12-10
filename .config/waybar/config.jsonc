@@ -1,0 +1,145 @@
+// WAYBAR
+
+{
+	"height": 30, 
+	"spacing": 0,
+	"position": "top",
+	"modules-left": [
+		"hyprland/workspaces",
+		"disk",
+		"memory",
+		"temperature"
+],
+
+	"modules-center": [
+		"custom/playerctl",
+		"clock"
+],
+
+	"modules-right": [
+		"custom/baraction",
+		"custom/powermenu",
+		"custom/btop",
+		"backlight",
+		"battery",
+		"network",
+		"pulseaudio"
+],
+    
+	"hyprland/workspaces": {
+	        "active-only": false,
+	        "all-outputs": true,
+	        "disable-scroll": false,
+	        "on-scroll-up": "hyprctl dispatch workspace -1",
+	        "on-scroll-down": "hyprctl dispatch workspace +1",
+			"format": "{icon}",
+			"on-click": "activate",
+			"format-icons": {
+	//			"1": "一",
+	//		<F8><F8><F8><F8>	"2": "二",
+	//			"3": "三",
+	//			"4": "四",
+	//			"5": "五",
+				"urgent": "",
+				"active": "",
+				"default": "",
+		"sort-by-number": true
+	}
+},
+	"memory": {
+	        "format": "󰍛  {used}GB",
+	        "interval": 2,
+		"tooltip": false
+},
+	"disk": {
+        	"format": "󰨣  {free}",
+        	"on-click": "baobab",
+        	"path": "/",
+		"tooltip": false
+},
+	"temperature": {
+        	// "thermal-zone": 2,
+        	// "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+        	"critical-threshold": 80,
+        	"format-critical": "{temperatureC}°C",
+        	"format": ""
+},
+	"clock": {
+		"tooltip": false,
+	        "format-alt": "{:%Y-%m-%d}"
+},
+	"backlight": {
+	        "format": "{icon}",
+		"format-alt": "{icon} {percent}%",
+	        "format-icons": ["󱃓", "󰪞", "󰪟", "󰪠", "󰪡", "󰪢", "󰪣", "󰪤", "󰪥"],
+		"tooltip": false
+},
+	"battery": {
+		"interval": 1,
+	        "states": {
+	            "warning": 30,
+	            "critical": 15
+	        },
+	        "format": "{icon}",
+	        "format-charging": "󰉁",
+		"format-charging-alt": "󰉁 {capacity}%",
+	        "format-plugged": "{capacity}%  ",
+	        "format-alt": "{icon} {capacity}%",
+	        "format-icons": [" ", " ", " ", " ", " "],
+		"tooltip": false
+},
+	"network": {
+	        "format-wifi": "{icon}",
+	        "format-ethernet": "󰈀",
+	        "format-linked": "{ifname} (No IP) 󰈂",
+	        "format-disconnected": "Disconnected ⚠",
+	        "format-alt": "{icon} {essid}",
+		"format-icons": ["󰤯 ","󰤟 ","󰤢 ","󰤥 ","󰤨 "],
+		"tooltip": false
+},
+	"pulseaudio": {
+	        "format": "{icon}",
+		"format-alt": "{icon} {volume}%",
+	        "format-bluetooth": "{icon}",
+	        "format-bluetooth-muted": "{icon}",
+	        "format-muted": "󰖁",
+	        "format-icons": {
+	            "headphone": "",
+	            "hands-free": "󰋎",
+	            "headset": "󰋎",
+	            "phone": "",
+	            "portable": "",
+	            "car": "",
+	            "default": ["󰕿", "󰖀", "󰕾", "󰈸"]
+	        },
+	        "on-click-right": "pavucontrol",
+		"tooltip": false
+},
+
+	"custom/playerctl": {
+    		"format": "󰎈  {}",
+        	"interval": 1,
+        	"on-click": "playerctl -p spotify play-pause",
+        	"on-scroll-up": "playerctl -p spotify previous",
+        	"on-scroll-down": "playerctl -p spotify next",
+        	"tooltip": false,
+        	"escape": true,
+        	"max-length": 60,
+        	"exec": "~/.config/waybar/scripts/playerctl.sh"
+},
+	"custom/btop": {
+		"format": "󱤅",
+		"on-click": "kitty -e btop",
+		"tooltip": false
+},
+	"custom/powermenu": {
+		"format": "󰤄",
+		"on-click": "$HOME/.config/wofi/scripts/wofi-power.sh",
+		"tooltip": false
+},
+	"custom/baraction": {
+		"format": "󰊠",
+		"on-click": "$HOME/.config/waybar/scripts/baraction",
+		"tooltip": false
+},
+}

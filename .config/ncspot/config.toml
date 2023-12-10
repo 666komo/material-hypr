@@ -1,0 +1,22 @@
+command_key = "@"
+use_nerdfont = false
+notify = true
+
+[theme]
+background = "black"
+primary = "light white"
+secondary = "light gray"
+title = "light white"
+playing = "red"
+playing_selected = "red"
+playing_bg = "gray"
+highlight = "light white"
+highlight_bg = "gray"
+error = "light white"
+error_bg = "red"
+statusbar = "gray"
+statusbar_progress = "light white"
+statusbar_bg = "black"
+cmdline = "light white"
+cmdline_bg = "black"
+search_match = "light red"

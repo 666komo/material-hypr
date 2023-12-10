@@ -1,0 +1,164 @@
+* {
+    /* `otf-font-awesome` is required to be installed for icons */
+    font-family: Ubuntu Nerd Font;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+window#waybar {
+    background-color: rgba(22,0,15,0);
+    border-top: 0px solid rgba(51,51,51,1);
+    color: #ffffff;
+    transition-property: background-color;
+    transition-duration: .5s;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+#workspaces{
+	background: #1A1C1D;
+	color: #c20427;
+	padding: 4px 8px 4px 8px;
+	border-radius: 8px;
+	margin: 0px 40px 0px 5px;
+}
+
+#workspaces button{
+    font-weight: bold;
+    color: #c20427;
+    background: transparent;
+    border-radius: 0px;
+    padding: 0 5px 0 0;
+
+}
+
+#workspaces button:hover {
+    color: #fabc2a;
+}
+
+#workspaces button.active {
+
+}
+
+#workspaces button.urgent {
+    color: red;
+}
+
+#clock{
+    font-size: 16px;
+    padding: 3px 8px 5px 8px;
+    margin: 0px 0 0 10px;
+    background: rgba(20,20,20,0.5);
+}
+
+.modules-left{
+    margin: 10px 0px 0 20px;
+}
+
+.modules-center{
+    margin: 10px 0 0 10px;
+}
+
+#clock,
+#custom-playerctl,
+#memory,
+#disk,
+#pulseaudio,
+#backlight,
+#battery,
+#custom-btop,
+#network{
+    background: #1A1C1D;
+    padding: 10px 20px 10px 20px;
+    border-radius: 8px;
+    color: #c20427;
+}
+
+#custom-baraction,
+#custom-powermenu,
+#pulseaudio,
+#custom-btop,
+#backlight,
+#network{
+    font-size: 18px;
+}
+
+.modules-right{
+    margin: 10px 10px 0 0px;
+}
+
+#backlight{
+    border-radius: 8px 0 0 8px;
+    color: #1A1C1D;
+    background: #c20427;
+}
+
+#battery{
+    border-radius: 0;
+    color: #1A1C1D;
+    background: #c20427;
+}
+
+@keyframes blink {
+    to {
+        background-color: #ffffff;
+        color: #000000;
+    }
+}
+
+label:focus {
+    background-color: #000000;
+}
+
+#memory{
+    margin: 0;
+    border-radius: 0 8px 8px 0;
+    padding-left: 10px;
+}
+
+#disk{
+    margin: 0px 0 0 10px;
+    padding-right: 0;
+    border-radius: 8px 0 0 8px;
+}
+
+#network {
+    border-radius: 0px;
+    margin: 0;
+    color: #1A1C1D;
+    background: #c20427;
+}
+
+#pulseaudio {
+    border-radius: 0px 8px 8px 0px;
+    margin: 0px 15px 0 0px;
+    color: #1A1C1D;
+    background: #c20427;
+}
+
+#custom-playerctl {
+    margin: 0;
+}
+
+#custom-powermenu {
+    padding: 10px 20px 10px 20px;
+    margin: 0px 0px 0px 10px;
+    background: #1A1C1D;
+    border-radius: 8px;
+    color: #c20427;
+}
+
+#custom-btop{
+    margin: 0 10px 0 10px;
+    border-radius: 8px;
+}
+
+#custom-baraction {
+    padding: 10px 21px 10px 19px;
+    margin: 0px 0 0px 10px;
+    background: #1A1C1D;
+    border-radius: 8px;
+    color: #c20427;
+}

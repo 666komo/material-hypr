@@ -1,0 +1,2 @@
+hyprctl dispatch workspace 9
+killall waybar

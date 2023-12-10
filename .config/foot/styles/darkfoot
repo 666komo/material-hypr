@@ -1,0 +1,27 @@
+font= Iosevka Nerd Font:size=10
+pad=20x20
+dpi-aware=no
+
+[colors]
+background=1A1C1D
+foreground=ffffff
+alpha=1
+
+regular0=000000
+bright0=7a7a7a
+regular1=a81e21
+bright1=ab3e40
+regular2=61a81e
+bright2=6aab3e
+regular3=a8961e
+bright3=aba43e
+regular4=1e3aa8
+bright4=4c6bcf
+regular5=5e1ea8
+bright5=784ccf
+regular6=1ea896
+bright6=4ccfc4
+regular7=b8b8b8
+bright7=ffffff
+
+
